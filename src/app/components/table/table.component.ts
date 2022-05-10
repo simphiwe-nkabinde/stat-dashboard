@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StatsService } from 'src/app/services/stats.service';
+import { ReportResult } from 'src/app/models/reportResult';
 
 @Component({
   selector: 'app-table',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  constructor() { }
+  data: ReportResult[] = [];
+
+  constructor(private statsServive: StatsService) { }
 
   ngOnInit(): void {
+    this.statsServive.getTabledata()
+    .subscribe(data => {
+      this.data = data
+    }, err => {
+      console.log(err);
+      
+    })
   }
 
 }

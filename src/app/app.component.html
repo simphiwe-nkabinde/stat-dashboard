@@ -1,27 +1,10 @@
-<header class="bg-light d-flex align-items-center justify-content-between p-2 border">
+<header class="bg-light text-center p-2 border">
   <h5>Simple Dashboard</h5>
-  <form class="mx-5" style="width:10rem;">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-  </form>
-  <div class="dropdown">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Hello, Jacob Simelani
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li><a class="dropdown-item" href="#">Settings</a></li>
-      <li><a class="dropdown-item" href="#">Logout</a></li>
-    </ul>
-  </div>
 </header>
 <div class="d-flex">
   <app-sidenav></app-sidenav>
   <main id="main-panel" class="p-4 scroll-x">
-
-    <h2>Dashboard</h2>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim tenetur odio aut in ducimus saepe?</p>
-
-    <h3 class="text-center">Daily Averages</h3>
+    <h2 class="my-3">Daily Averages</h2>
 
     <div class="scroll-x d-flex my-2">
       <app-summary-card></app-summary-card>
@@ -30,7 +13,7 @@
       <app-summary-card></app-summary-card>
       <app-summary-card></app-summary-card>
     </div>
-    <div class="mt-4">
+    <div class="mt-4"  id="table-container">
       <app-table></app-table>
     </div>
   </main>  
